@@ -15,7 +15,7 @@
       }
     </script>
   </head>
-  <body onload="welcome();">
+  <body onload="on();">
       <style>
         @import url(https://fonts.googleapis.com/css?family=Cherry+Swash);
         body{
@@ -29,18 +29,68 @@
       #extra2{
       display: none;
       }
+      #overlay {
+      position: fixed;
+      display: none;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(0, 0, 0, 0.7);
+      z-index: 2;
+      cursor: pointer;
+      }
+
+      #text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      font-size: 50px;
+      color: white;
+      transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      }
+      #clickMe {
+      width: 100px;
+      height: 100px;
+      color: orange;
+      position: relative;
+      -webkit-animation-name: example; /* Safari 4.0 - 8.0 */
+      -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
+      animation-name: example;
+      animation-duration: 4s;
+      }
+      @keyframes example {
+      0% {color:red; left:0px; top:0px;}
+      25% {color:yellow; left:200px; top:0px;}
+      50% {color:blue; left:200px; top:200px;}
+      75% {color:green; left:0px; top:200px;}
+      100% {color:red; left:0px; top:0px;}
+      }
       </style>
     <div id="love">
-      <div class="container">
-        <div class="row"><div class="col-lg-12">
-          <form>
-            <div class="form-row">
-              <div class="col-12">
-                <input type="text" class="form-control" placeholder="First name">
-              </div>
-            </div>
-          </form>
-        </div></div>
+      <div id="overlay" style="padding:20px">
+        <div id="text">
+           <div class="card">
+             <div class="card-body">
+               <form>
+                 <div class="form-row">
+                   <div class="col-md-12">
+                     <input type="text" id="pondati" class="form-control" placeholder="Gayathri">
+                   </div>
+                 </div>
+                 <div class="form-row">
+                   <div class="col-md-12">
+                    <button type="button" onclick="g();" id="pondati2" class="btn"
+                      placeholder="click" style="background:orange;color:white;width:100%;">J4F</button>
+                   </div>
+                 </div>
+               </form>
+             </div>
+           </div>
+        </div>
       </div>
       <br>
       <br>
@@ -116,6 +166,17 @@
             </div>
           </div>
         </div>
+        <div class="row" id="nor5">
+          <div class="col-lg-12">
+            <div class="card" style="text-align: center;">
+              <div class="card-body">
+                <span id="clickMe">click kuttyma--></span>
+                <button type="button" onclick="back();" class="btn btn-success display-4">by
+                  <span id="input"></span></button>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
       <div class="container-fluid">
         <!-- XTRA  -->
@@ -145,99 +206,40 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script>
+      function on() {
+      document.getElementById("overlay").style.display = "block";
+      }
+
+      function off() {
+      document.getElementById("overlay").style.display = "none";
+      }
+      document.getElementById('pondati2').addEventListener('click',function(){
+        document.getElementById("overlay").style.display = "none";
+        confirm("Are you 'Ashok' wife?");
+      });
       //post functions
       function g(){
       document.getElementById("g").innerHTML = "I";
-      }
-      function a() {
       document.getElementById("a").innerHTML = "Love";
-      }
-      function y() {
       document.getElementById("y").innerHTML = "you";
-      }
-      function a2() {
       document.getElementById("a2").innerHTML = "DI";
-      }
-      function t() {
       document.getElementById("t").innerHTML = "EN";
-      }
-      function h() {
       document.getElementById("h").innerHTML = "CHLM KEDI";
-      }
-      function r(){
       document.getElementById("r").innerHTML = "GAYATHRI";
-      }
-      function i() {
       document.getElementById("i").innerHTML = "PONDATI UMMMMMMAAAH";
+      document.getElementById('input').innerHTML = document.getElementById('pondati').value;
       }
-
-     //keyCode type functions
-      $(document).on("keydown", function(event) {
-      if (event.keyCode === 35) {
-      g();
-      confirm("You are Gayathri?");
-      event.preventDefault();
-      }
-      });
-      $(document).on("keydown", function(event) {
-      if (event.keyCode === 29) {
-      a();
-      event.preventDefault();
-      }
-      });
-      $(document).on("keydown", function(event) {
-      if (event.keyCode === 53) {
-      y();
-      event.preventDefault();
-      }
-      });
-      $(document).on("keydown", function(event) {
-      if (event.keyCode === 29) {
-      a2();
-      event.preventDefault();
-      }
-      });
-      $(document).on("keydown", function(event) {
-      if (event.keyCode === 48) {
-      t();
-      event.preventDefault();
-      }
-      });
-      $(document).on("keydown", function(event) {
-      if (event.keyCode === 36) {
-      h();
-      event.preventDefault();
-      }
-      });
-      $(document).on("keydown", function(event) {
-      if (event.keyCode === 46) {
-      r();
-      event.preventDefault();
-      }
-      });
-      $(document).on("keydown", function(event) {
-      if (event.keyCode === 37) {
-      i();
-      confirm("You are Ashok Wife? backspace button click pannu plz");
-      event.preventDefault();
-      }
-      });
       //backspace functions
       function back(){
+      alert("'Nee eppaum ennaku maddum da kuttyma'");
       $("#nor1").hide(1000);
       $("#nor2").hide(1000);
       $("#nor3").hide(1000);
       $("#nor4").hide(1000);
+      $("#nor5").hide(1000);
       $("#extra1").show(2000);
       $("#extra2").show(2000);
       }
-      $(document).on("keydown", function(event) {
-      if (event.keyCode === 8) {
-      back();
-      alert("'Nee eppaum ennaku maddum da kuttyma'");
-      event.preventDefault();
-      }
-      });
     </script>
   </body>
 </html>
