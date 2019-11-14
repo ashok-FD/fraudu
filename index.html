@@ -4,226 +4,206 @@
     <title>I'm fradu</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="validate.css">
+    <link rel="stylesheet" href="C:\Users\Ashok\Desktop\localStore\style.css">
   </head>
-  <body onload="on();">
-      <style>
-        @import url(https://fonts.googleapis.com/css?family=Cherry+Swash);
-        body{
-          font-family: 'Cherry Swash';
-        }
-      h1{
-      text-align: center;
-      font-size: 30px;
-      }
-      #extra1,
-      #extra2{
-      display: none;
-      }
-      #overlay {
-      position: fixed;
-      display: none;
-      width: 100%;
-      height: 100%;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background-color: rgba(0, 0, 0, 0.7);
-      z-index: 2;
-      cursor: pointer;
-      }
+  <body>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <a class="navbar-brand" href="#">Navbar</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
 
-      #text {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      font-size: 50px;
-      color: black;
-      transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-      }
-      #clickMe {
-      width: 100px;
-      height: 100px;
-      color: orange;
-        }
-      </style>
-    <div id="love">
-      <div id="overlay">
-        <div id="text">
-           <div class="card" style="width:18rem;">
-             <div class="card-body">
-               <form>
-                 <div class="form-row">
-                   <div class="col-md-12">
-                     <label for="inputEmail4">"How you are call me?"</label>
-                     <input type="text" id="pondati" class="form-control" placeholder="Type here!">
-                   </div>
-                 </div>
-                 <div class="form-row">
-                   <div class="col-md-12">
-                    <button type="button" onclick="g();" id="pondati2" class="btn"
-                      placeholder="click" style="background:orange;color:white;width:100%;">J4F</button>
-                   </div>
-                 </div>
-               </form>
-             </div>
-           </div>
-        </div>
-      </div>
-      <br>
-      <br>
-      <div class="container-fluid">
-        <div class="row" id="nor1">
-          <div class="col-lg-4">
-            <div class="card">
-              <div class="card-body">
-                <h1 id="g"></h1>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mr-auto">
+                  <li class="nav-item active">
+                      <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                  </li>
+              </ul>
+              <form class="form-inline my-2 my-lg-0">
+                  <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                  <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+              </form>
+          </div>
+      </nav>
+      <section id="cardContainer">
+          <div class="container-fluid" id="cardcontainer">
+              <div class="row" id="columOne">
+                  <div class="col-lg-3">
+                      <div class="card" onclick="overlayOne();" id="hideCardOne">
+                          <div class="card-body">
+                              <div class="display-4" id="textOne">Are You?</div>
+                              <p class="h6" id="msgOne" style="display: none;"></p>
+                              <br>
+                              <div class="options" id="options" style="display: none;">
+                                  <button class="btn btn-outline b1" onclick="msg();">Yaro</button>
+                                  <button class="btn btn-outline b1" onclick="msg();">En pondati</button>
+                                  <button class="btn btn-outline b1" onclick="wau();">Thrla</button>
+                                  <button class="btn btn-outline b1" onclick="msg();">karuvachi</button>
+                              </div>
+                          </div>
+                          <!-- <div class="overlay" style="padding:20px" id="firstOverlay">
+                              <div class="text">
+                                  <div class="card">
+                                      <div class="card-body">
+                                          <p class="display-4" >Who are you?</p>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div> -->
+                      </div>
+                      <div class="card" style="display: none;" id="firstCard1">
+                          <img src="https://bit.ly/2q3FqpL" class="card-img-top" alt="...">
+                          <div class="card-body">
+                              <p class="card-text" id="firstContent" style="display: none;">
+                                  <span class="display-4">E</span>nnaku theriu kuttyma ne etha click pannirupenu.,intha option vachathukku reasoneh
+                                  ne epauu soldrathutha enna kettalu theriyathu theriyathu!. Kuttyma mamaku onna
+                                  <b>romba</b> pudikkunda onkudaiyee irrukkanumpolave irrukkun di.
+                                  Longah romba thoora nadakkanun da Unkaiya <b>erukki</b> pudichukkida.
+                              </p>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col-lg-3">
+                      <div class="col-12">
+                          <div class="card" id="firstCard2" style="display: none;">
+                              <div class="card-body">
+                                  <p class="card-text">
+                                    Na ithuvaraikku onnaku thriyama ethu pannathe illa da. Namma redu perum thani thaniya pirichu irrunthalu namma ipo pesura antha 10min tha
+                                    namma loveah ve unara vaikkuthu <b>3yrs</b> ah theriyatha pakkatha etho pudhu pudhu feelingla manasukkulla vathutu vathutu pooguthu di. Onna pakkanu
+                                    pakkanumnu thoonite irruku kuttyma. Ne vanu epa kuputuvenu kathude irrupandi kupda vema <b>Mama</b> vanthuruva okidda.
+                                  </p>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-12">
+                          <div class="card" id="firstCard3" style="display: none;" onclick="f3image()">
+                            <img src="https://bit.ly/2NP39Tv" class="card-img-top" alt="" style="display: none;" id="first3image">
+                              <div class="card-body">
+                                  <p class="card-text" id="missyou">
+                                      Eruki pudichukko kuttyma Rmba.. 
+                                  </p>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col-lg-3">
+                      <div class="card">
+                          <img src="https://bit.ly/33Quk5O" class="card-img-top" alt="...">
+                          <div class="card-body">
+                              <p class="card-text">
+                                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                  incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                                  exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+                                  dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                                  Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+                                  mollit anim id est laborum.
+                              </p>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col-lg-3">
+                      <div class="col-12">
+                          <div class="card">
+                              <div class="card-body">
+                                  <p class="card-text">
+                                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                      incididunt ut labore et dolore magna aliqua.
+                                  </p>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-12">
+                          <div class="card">
+                              <div class="card-body">
+                                  <p class="card-text">
+                                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                      incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                                      exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+                                      irure
+                                      dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                                      pariatur.
+                                      Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+                                      mollit anim id est laborum.
+                                  </p>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
               </div>
-            </div>
-          </div>
-          <div class="col-lg-4">
-            <div class="card">
-              <div class="card-body">
-                <h1 id="a"></h1>
+              <!-- Secound row -->
+              <div class="row" id="columTwo">
+                  <div class="col-lg-3">
+                      <div class="card">
+                          <div class="card-body">
+                              <p class="card-text">
+                                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                  incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                                  exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+                                  dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                                  Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+                                  mollit anim id est laborum.
+                              </p>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col-lg-3">
+                      <div class="card">
+                           <img src="https://bit.ly/2XcMU5C" class="card-img-top" alt="...">
+                          <div class="card-body">
+                              <p class="card-text">
+                                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                  incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                                  exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+                                  dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                                  Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+                                  mollit anim id est laborum.
+                              </p>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col-lg-3">
+                      <div class="card">
+                          <div class="card-body">
+                              <p class="card-text">
+                                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                  incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                                  exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+                                  dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                                  Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+                                  mollit anim id est laborum.
+                              </p>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col-lg-3">
+                      <div class="card">
+                          <img src="https://bit.ly/352peDI" class="card-img-top" alt="...">
+                          <div class="card-body">
+                              <p class="card-text">
+                                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                  incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                                  exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+                                  dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                                  Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+                                  mollit anim id est laborum.
+                              </p>
+                          </div>
+                      </div>
+                  </div>
               </div>
-            </div>
           </div>
-          <div class="col-lg-4">
-            <div class="card">
-              <div class="card-body">
-                <h1 id="y"></h1>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- 2 row -->
-        <div class="row" id="nor2">
-          <div class="col-lg-4">
-          </div>
-          <div class="col-lg-4">
-            <div class="card">
-              <div class="card-body">
-                <h1 id="a2"></h1>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4">
-          </div>
-        </div>
-        <!-- third-row -->
-        <div class="row" id="nor3">
-          <div class="col-lg-4">
-            <div class="card">
-              <div class="card-body">
-                <h1 id="t"></h1>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4">
-            <div class="card">
-              <div class="card-body">
-                <h1 id="h"></h1>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4">
-            <div class="card">
-              <div class="card-body">
-                <h1 id="r"></h1>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- 4th row -->
-        <div class="row" id="nor4">
-          <div class="col-lg-12">
-            <div class="card">
-              <div class="card-body">
-                <h1 id="i"></h1>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="row" id="nor5">
-          <div class="col-lg-12">
-            <div class="card" style="text-align: center;">
-              <div class="card-body">
-                <span id="clickMe">click kuttyma--></span>
-                <button type="button" onclick="back();" class="btn btn-success display-4">by
-                  <span id="input"></span></button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="container-fluid">
-        <!-- XTRA  -->
-        <div class="row" id="extra1">
-          <div class="col-lg-12">
-            <div class="card">
-              <div class="card-body">
-                <h1 style="color:orange">I miss you di</h1>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="row" id="extra2">
-          <div class="col-lg-12">
-            <div class="card">
-              <div class="card-body">
-                <h1 style="color:orange">Kuttyma</h1>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+      </section>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <script>
-      function on() {
-      document.getElementById("overlay").style.display = "block";
-      }
-
-      function off() {
-      document.getElementById("overlay").style.display = "none";
-      }
-      document.getElementById('pondati2').addEventListener('click',function(){
-        document.getElementById("overlay").style.display = "none";
-        confirm("Are you 'Ashok' wife?");
-      });
-      //post functions
-      function g(){
-      document.getElementById("g").innerHTML = "I";
-      document.getElementById("a").innerHTML = "Love";
-      document.getElementById("y").innerHTML = "you";
-      document.getElementById("a2").innerHTML = "DI";
-      document.getElementById("t").innerHTML = "EN";
-      document.getElementById("h").innerHTML = "CHLM KEDI";
-      document.getElementById("r").innerHTML = "GAYATHRI";
-      document.getElementById("i").innerHTML = "PONDATI UMMMMMMAAAH";
-      document.getElementById('input').innerHTML = document.getElementById('pondati').value;
-      }
-      //backspace functions
-      function back(){
-      alert("'Nee eppaum ennaku maddum da kuttyma'");
-      $("#nor1").hide(1000);
-      $("#nor2").hide(1000);
-      $("#nor3").hide(1000);
-      $("#nor4").hide(1000);
-      $("#nor5").hide(1000);
-      $("#extra1").show(2000);
-      $("#extra2").show(2000);
-      }
-    </script>
+     <script src="http://code.jquery.com/jquery-1.6.2.min.js"></script>
+    <script src="quotes.js"></script>
   </body>
 </html>
