@@ -1,0 +1,58 @@
+.container-fluid{
+    background-color: #ffc46a;
+}
+nav{
+    box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.125);
+}
+#cardcontainer{
+    margin-top:0px;
+}
+#columTwo {
+    margin-top:30px;
+}
+.card{
+    margin:10px 0px 10px 0px;
+    border: 3px solid orange;
+    border-radius: 20px 20px 20px 20px;
+    box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.125);
+    overflow: hidden;
+    cursor: pointer;
+}
+/* overlay css */
+.overlay {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 2;
+    cursor: pointer;
+}
+
+.text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 50px;
+    color: black;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
+.b1{
+    width: 100%;
+    background: chocolate;
+    color: cornsilk;
+    margin:5px 0px 5px 0px;
+    border-radius:50px 0px 50px 0px;
+}
+.b1:hover{
+    width:50%;
+    color: white;
+}
+.options{
+    text-align: center;
+}
